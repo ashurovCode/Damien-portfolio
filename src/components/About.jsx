@@ -76,10 +76,10 @@ const About = () => {
                   <img src={LinkedinIcon} alt="" />
                 </div>
                 <div className="flex flex-wrap gap-4 md:gap-[20px]">
-                  <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+                  <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
                     Let’s Work
                   </button>
-                  <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+                  <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
                     Download CV
                   </button>
                 </div>

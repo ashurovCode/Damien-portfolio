@@ -33,14 +33,14 @@ const Navbar = () => {
           </ul>
 
           <div className="hidden md:block">
-            <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] hover:bg-[#353538] transition">
+            <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] hover:bg-[#353538] transition cursor-pointer">
               Contact Me
             </button>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-[#AFB0B6] hover:text-white transition"
+            className="md:hidden text-[#AFB0B6] hover:text-white transition cursor-pointer"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -72,7 +72,7 @@ const Navbar = () => {
         </ul>
         <button
           onClick={() => setIsOpen(false)}
-          className="bg-[#D9EFDE] text-[#232E26] px-[28px] py-[14px] rounded-[10px] hover:opacity-80 transition"
+          className="bg-[#D9EFDE] text-[#232E26] px-[28px] py-[14px] rounded-[10px] hover:opacity-80 transition cursor-pointer"
         >
           Contact Me
         </button>

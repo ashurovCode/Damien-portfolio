@@ -73,7 +73,7 @@ const FAQ = () => {
             {/* Question */}
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex items-center justify-between px-6 md:px-8 py-6 md:py-8 text-left hover:bg-[#0F0F10] transition-colors"
+              className="w-full flex items-center justify-between px-6 md:px-8 py-6 md:py-8 text-left hover:bg-[#0F0F10] transition-colors cursor-pointer"
             >
               <h3 className="text-[#AFB0B6] text-[16px] md:text-[20px] font-semibold pr-4">
                 {faq.question}

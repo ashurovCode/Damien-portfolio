@@ -5,6 +5,9 @@ import ArrowLink from '../assets/arrow.png'
 import PortfolioImg1 from '../assets/Image1.png'
 import PortfolioImg2 from '../assets/Image2.png'
 import PortfolioImg3 from '../assets/Image3.png'
+import PortfolioImg4 from '../assets/Image4.png'
+import PortfolioImg5 from '../assets/Image5.png'
+import PortfolioImg6 from '../assets/Image6.png'
 
 const portfolioData = [
   {
@@ -23,7 +26,17 @@ const portfolioData = [
     date: 'May 2022',
   },
   {
-    image: PortfolioImg1,
+    image: PortfolioImg4,
+    title: 'Faces of Resilience',
+    date: 'March 2022',
+  },
+  {
+    image: PortfolioImg5,
+    title: 'Faces of Resilience',
+    date: 'March 2022',
+  },
+  {
+    image: PortfolioImg6,
     title: 'Faces of Resilience',
     date: 'March 2022',
   },
@@ -66,10 +79,10 @@ const Portfolio = () => {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return
-    
+
     const distance = touchStart - touchEnd
     const minSwipeDistance = 50 // Minimum distance for a swipe
-    
+
     if (distance > minSwipeDistance) {
       // Swiped left - go to next slide
       nextSlide()
@@ -77,7 +90,7 @@ const Portfolio = () => {
       // Swiped right - go to previous slide
       prevSlide()
     }
-    
+
     // Reset values
     setTouchStart(0)
     setTouchEnd(0)
@@ -99,14 +112,20 @@ const Portfolio = () => {
         {/* Desktop arrows */}
         <div className="hidden md:flex items-center gap-2.5">
           <div className="flex gap-2">
-            <button onClick={prevSlide}>
+            <button
+              onClick={prevSlide}
+              className="cursor-pointer hover:opacity-70 transition-opacity"
+            >
               <img src={LeftArrow} alt="Left Arrow" />
             </button>
-            <button onClick={nextSlide}>
+            <button
+              onClick={nextSlide}
+              className="cursor-pointer hover:opacity-70 transition-opacity"
+            >
               <img src={RightArrow} alt="Right Arrow" />
             </button>
           </div>
-          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
             View All Works
           </button>
         </div>
@@ -135,7 +154,9 @@ const Portfolio = () => {
                   <div
                     key={idx}
                     className="flex flex-col overflow-hidden w-full"
-                    style={{ minWidth: isMobile ? '100%' : 'calc(33.333% - 16px)' }}
+                    style={{
+                      minWidth: isMobile ? '100%' : 'calc(33.333% - 16px)',
+                    }}
                   >
                     <img
                       src={item.image}
@@ -162,16 +183,22 @@ const Portfolio = () => {
           ))}
         </div>
         <div className="flex md:hidden justify-center gap-2 mt-6">
-          <button onClick={prevSlide}>
+          <button
+            onClick={prevSlide}
+            className="cursor-pointer hover:opacity-70 transition-opacity"
+          >
             <img src={LeftArrow} alt="Prev" />
           </button>
-          <button onClick={nextSlide}>
+          <button
+            onClick={nextSlide}
+            className="cursor-pointer hover:opacity-70 transition-opacity"
+          >
             <img src={RightArrow} alt="Next" />
           </button>
         </div>
         {/* Mobile View All Works button */}
         <div className="flex md:hidden justify-center mt-6">
-          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
             View All Works
           </button>
         </div>

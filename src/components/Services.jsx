@@ -3,6 +3,8 @@ import ArrowLink from '../assets/arrow.png'
 import LeftArrow from '../assets/arrowleft.png'
 import RightArrow from '../assets/arrowright.png'
 import EventsImg from '../assets/eventsimg.png'
+import WedingImg from '../assets/wedingimg.png'
+import PortraitImg from '../assets/PortretImg.png'
 import StarIcon from '../assets/starticon.png'
 
 const serviceData = [
@@ -28,7 +30,7 @@ const serviceData = [
       'Customizable albums.',
       'Professional editing and retouching.',
     ],
-    image: EventsImg,
+    image: WedingImg,
   },
   {
     title: 'Portrait',
@@ -40,7 +42,7 @@ const serviceData = [
       'High-resolution images.',
       'Customized retouching.',
     ],
-    image: EventsImg,
+    image: PortraitImg,
   },
 ]
 
@@ -68,16 +70,16 @@ const Services = () => {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return
-    
+
     const distance = touchStart - touchEnd
     const minSwipeDistance = 50
-    
+
     if (distance > minSwipeDistance) {
       nextService()
     } else if (distance < -minSwipeDistance) {
       prevService()
     }
-    
+
     setTouchStart(0)
     setTouchEnd(0)
   }
@@ -98,14 +100,20 @@ const Services = () => {
         {/* Desktop arrows & button */}
         <div className="hidden md:flex items-center gap-2.5">
           <div className="flex gap-2">
-            <button onClick={prevService}>
+            <button
+              onClick={prevService}
+              className="cursor-pointer hover:opacity-70 transition-opacity"
+            >
               <img src={LeftArrow} alt="Left Arrow" />
             </button>
-            <button onClick={nextService}>
+            <button
+              onClick={nextService}
+              className="cursor-pointer hover:opacity-70 transition-opacity"
+            >
               <img src={RightArrow} alt="Right Arrow" />
             </button>
           </div>
-          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
             View All Services
           </button>
         </div>
@@ -126,21 +134,21 @@ const Services = () => {
               className="flex-shrink-0 flex flex-col lg:flex-row gap-8 w-full"
             >
               {/* Image first on mobile */}
-              <div className="flex justify-center lg:justify-end w-full lg:w-auto">
+              <div className="flex justify-center lg:justify-end w-full lg:w-[700px] flex-shrink-0">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="max-w-full h-auto rounded-[10px]"
+                  className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-[10px]"
                 />
               </div>
 
               {/* Text */}
-              <div className="flex flex-col gap-6 w-full lg:w-[773px]">
+              <div className="flex flex-col gap-6 w-full lg:flex-1">
                 <div className="flex items-center gap-[10px]">
                   <h1 className="text-[#797C86] text-[32px] md:text-[44px] font-semibold uppercase">
                     {service.title}
                   </h1>
-                  <button className="bg-[#4A2CED] px-[30px] md:px-[50px] py-[10px] md:py-[16px] rounded-[100px]">
+                  <button className="bg-[#4A2CED] px-[30px] md:px-[50px] py-[10px] md:py-[16px] rounded-[100px] cursor-pointer">
                     <img
                       src={ArrowLink}
                       alt=""
@@ -168,10 +176,16 @@ const Services = () => {
 
         {/* Mobile arrows (fixed outside slider) */}
         <div className="flex md:hidden justify-center gap-2 mt-6">
-          <button onClick={prevService}>
+          <button
+            onClick={prevService}
+            className="cursor-pointer hover:opacity-70 transition-opacity"
+          >
             <img src={LeftArrow} alt="Prev" />
           </button>
-          <button onClick={nextService}>
+          <button
+            onClick={nextService}
+            className="cursor-pointer hover:opacity-70 transition-opacity"
+          >
             <img src={RightArrow} alt="Next" />
           </button>
         </div>

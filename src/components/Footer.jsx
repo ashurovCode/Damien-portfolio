@@ -25,7 +25,7 @@ const Footer = () => {
             <h1 className="text-white text-[32px] md:text-[58px] font-semibold">
               Let's
             </h1>
-            <button className="bg-[#4A2CED] px-[30px] md:px-[50px] py-[10px] md:py-[16px] rounded-[100px]">
+            <button className="bg-[#4A2CED] px-[30px] md:px-[50px] py-[10px] md:py-[16px] rounded-[100px] cursor-pointer">
               <img
                 src={ArrowLink}
                 alt=""

@@ -183,14 +183,14 @@ const Testimonials = () => {
       {/* Desktop arrows & button */}
       <div className="hidden md:flex items-center justify-between mb-10">
         <div className="flex gap-2">
-          <button onClick={prevSlide}>
+          <button onClick={prevSlide} className="cursor-pointer hover:opacity-70 transition-opacity">
             <img src={LeftArrow} alt="Left Arrow" />
           </button>
-          <button onClick={nextSlide}>
+          <button onClick={nextSlide} className="cursor-pointer hover:opacity-70 transition-opacity">
             <img src={RightArrow} alt="Right Arrow" />
           </button>
         </div>
-        <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+        <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
           View All Testimonials
         </button>
       </div>
@@ -279,17 +279,17 @@ const Testimonials = () => {
 
         {/* Mobile arrows */}
         <div className="flex md:hidden justify-center gap-2 mt-6">
-          <button onClick={prevSlide}>
+          <button onClick={prevSlide} className="cursor-pointer hover:opacity-70 transition-opacity">
             <img src={LeftArrow} alt="Prev" />
           </button>
-          <button onClick={nextSlide}>
+          <button onClick={nextSlide} className="cursor-pointer hover:opacity-70 transition-opacity">
             <img src={RightArrow} alt="Next" />
           </button>
         </div>
 
         {/* Mobile View All button */}
         <div className="flex md:hidden justify-center mt-6">
-          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition">
+          <button className="bg-[#1C1C21] text-[16px] text-white px-[24px] py-[16px] rounded-[10px] border border-[#2F2F37] hover:bg-[#353538] transition cursor-pointer">
             View All Testimonials
           </button>
         </div>
